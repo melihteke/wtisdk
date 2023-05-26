@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](URL_TO_YOUR_BUILD_STATUS)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]([URL_TO_YOUR_BUILD_STATUS](https://pypi.org/project/wtisdk/))
 
 
 ![image](https://github.com/melihteke/wtisdk/assets/36086368/24e4279e-54b6-4f3c-8d57-81ce9a005c89)
