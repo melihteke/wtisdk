@@ -1,6 +1,6 @@
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](URL_TO_YOUR_BUILD_STATUS)
 [![PyPI Version](https://img.shields.io/pypi/v/wtisdk.svg)](https://pypi.org/project/wtisdk/)
-[![Downloads](https://img.shields.io/pypi/dm/wtisdk.svg)](https://pypi.org/project/wtisdk/)
+![PyPI Downloads](https://img.shields.io/badge/dynamic/json?label=downloads&query=$.total_downloads&url=https://pypistats.org/api/packages/wtisdk/recent)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
