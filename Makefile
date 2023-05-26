@@ -1,3 +1,5 @@
+.PHONY: delete build upload
+
 delete: 
 	rm -rf build/
 	rm -rf dist/*
