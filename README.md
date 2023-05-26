@@ -62,6 +62,6 @@ Out[4]:
  'uptime': '903918.86',
  'restful': 'v1.0, v2 (Jan22)',
  'macaddresses': [{'mac': '00-09-9b-01-a7-34'}, {'mac': '00-09-9b-f6-a7-56'}],
- 'interface_list': 'eth0, eth1'}
+ 'interface_list': 'eth0, eth1'} 
 
 ```
