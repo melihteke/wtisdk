@@ -2,8 +2,7 @@
 [![PyPI Version](https://img.shields.io/pypi/v/wtisdk.svg)](https://pypi.org/project/wtisdk/)
 [![Downloads](https://img.shields.io/pypi/dm/wtisdk.svg)](https://pypi.org/project/wtisdk/)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![PyPI Version](https://img.shields.io/pypi/v/wtisdk.svg)](https://pypi.org/project/wtisdk/)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/wtisdk.svg)](https://pypi.org/project/wtisdk/)
+
 
 ![image](https://github.com/melihteke/wtisdk/assets/36086368/24e4279e-54b6-4f3c-8d57-81ce9a005c89)
 
