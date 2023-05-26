@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x  # Replace with your desired Python version
+          python-version: 3.10
 
       - name: Install Dependencies
         run: pip install -r requirements.txt
@@ -29,4 +29,4 @@ jobs:
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@27.0.0
         with:
-          password: ${{ secrets.PYPI_API_TOKEN }}  # Replace with your PyPI API token
+          password: ${{ secrets.PYPI_API_TOKEN }}  
