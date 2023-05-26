@@ -21,7 +21,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Tests
-        run: pytest  # Modify this command to run your tests
+        run: pytest tests/
 
       - name: Build Package
         run: python setup.py sdist bdist_wheel
