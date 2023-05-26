@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='wtisdk',
-    version='1.2',
+    version='1.3',
     author='Melih Teke',
     author_email='me@mteke.com',
     description='WTI SDK for interacting with WTI devices',
