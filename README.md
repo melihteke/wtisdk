@@ -1,6 +1,6 @@
 [![PyPI Version](https://img.shields.io/pypi/v/wtisdk.svg)](https://pypi.org/project/wtisdk/)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](URL_TO_YOUR_BUILD_STATUS)
-![PyPI Downloads](https://badgen.net/pypi/dm/wtisdk)
+[![PyPI Downloads](https://img.shields.io/endpoint?url=https://pypistats.org/api/packages/wtisdk/month)](https://pypistats.org/packages/wtisdk)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
