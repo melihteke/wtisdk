@@ -668,8 +668,8 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## Resources
-[WTI Website](https://www.wti.com/)
-[WTI API Documentation](https://ftp.wti.com/pub/TechSupport/Restful_WTI/current/api/api.html#)
+- [WTI Website](https://www.wti.com/)
+- [WTI API Documentation](https://ftp.wti.com/pub/TechSupport/Restful_WTI/current/api/api.html#)
 
 ## Acknowledgments
 The dnacsdk library served as an inspiration while I started to write this library.
