@@ -1,0 +1,12 @@
+{"status": {"code": "0", "text": "OK"},
+ "alarms": [{"name": "OVER TEMPERATURE (INITIAL)", "status": "0"},
+  {"name": "OVER TEMPERATURE (CRITICAL)", "status": "0"},
+  {"name": "LOST COMMUNICATION WITH UNIT", "status": "1"},
+  {"name": "PING NO ANSWER", "status": "0"},
+  {"name": "SERIAL PORT INVALID ACCESS LOCKOUT", "status": "0"},
+  {"name": "POWER CYCLE", "status": "0"},
+  {"name": "BUFFER THRESHOLD", "status": "0"},
+  {"name": "LOST VOLTAGE (LINE INPUT)", "status": "0"},
+  {"name": "EMERGENCY SHUTOFF", "status": "0"},
+  {"name": "NO DIALTONE", "status": "0"},
+  {"name": "BUFFER FILTERING", "status": "0"}]}
