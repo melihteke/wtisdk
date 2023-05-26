@@ -1,5 +1,5 @@
 [![PyPI Version](https://img.shields.io/pypi/v/wtisdk.svg)](https://pypi.org/project/wtisdk/)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](URL_TO_YOUR_BUILD_STATUS)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/melihteke/wtisdk/actions/workflows/python-publish.yml)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
