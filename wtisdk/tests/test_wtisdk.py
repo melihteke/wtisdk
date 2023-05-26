@@ -6,7 +6,7 @@ import requests
 
 def test_get_status(mocker):
     # Load the mock response data from the JSON file
-    with open('fixtures/wti_get_status.json', 'r') as file:
+    with open('wtisdk/tests/fixtures/wti_get_status.json', 'r') as file:
         mock_response_data = json.load(file)
     
     # Mock the requests library and the response object
@@ -27,7 +27,7 @@ def test_get_status(mocker):
     
 def test_get_alarm_status(mocker):
     # Load the mock response data from the JSON file
-    with open('fixtures/wti_get_alarm_status.json', 'r') as file:
+    with open('wtisdk/tests/fixtures/wti_get_alarm_status.json', 'r') as file:
         mock_response_data = json.load(file)
 
     # Mock the requests library and the response object
