@@ -1,4 +1,7 @@
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]([URL_TO_YOUR_BUILD_STATUS](https://pypi.org/project/wtisdk/))
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](URL_TO_YOUR_BUILD_STATUS)
+[![PyPI Version](https://img.shields.io/pypi/v/wtisdk.svg)](https://pypi.org/project/wtisdk/)
+[![Downloads](https://img.shields.io/pypi/dm/wtisdk.svg)](https://pypi.org/project/wtisdk/)
+[![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
 ![image](https://github.com/melihteke/wtisdk/assets/36086368/24e4279e-54b6-4f3c-8d57-81ce9a005c89)
@@ -6,7 +9,13 @@
 # WTI SDK - API Wrapper for Western Telematic Inc. (WTI)
 WTI SDK is a Python library that serves as an API wrapper for Western Telematic Inc. (WTI) devices. It provides a convenient way to interact with WTI devices and perform various actions.
 
-Please note that this is not an official tool provided by Western Telematic Inc. It was developed by Melih Teke to simplify the integration with WTI devices.
+Please note that WTI is a vendor specializing in console and power management solutions for network equipment. Their devices offer advanced features for managing and controlling network infrastructure.
+
+This SDK, developed by Melih Teke, aims to simplify the integration with WTI devices and enhance the functionality for managing and controlling network infrastructure.
+
+Please refer to the WTI Website for more information about Western Telematic Inc. and their range of devices.
+
+Please note that this SDK is not an official tool provided by Western Telematic Inc., but an independent contribution to facilitate working with their devices.
 
 ## Features
 - Connect to WTI devices and retrieve operational data.
@@ -116,7 +125,7 @@ response = client.edit_power_plug_plugconfig(config)
 Retrieves information about a specific user from the WTI device.
 ```sh 
 client = WtiClient(host, username, password)
-user_info = client.get_specific_user("john_doe")
+user_info = client.get_specific_user("Melih Teke")
 print(user_info)
 ```
 ### Add new user
@@ -222,7 +231,7 @@ new_interface_config = {
                 {
                     "ip": "10.60.11.101",
                     "netmask": "255.255.255.240",
-                    "gateway": "10.60.11.97"
+                    "gateway": "10.20.11.97"
                 }
             ]
         }
@@ -486,7 +495,7 @@ print(updated_snmp_access_config)
 
 ```
 
-# Retrieve IP Tables
+### Retrieve IP Tables
 Retrieves the IP tables configuration from the device.
 
 ```sh 
@@ -497,7 +506,7 @@ print(ip_tables_config)
 ```
 
 
-# Edit IP Tables
+### Edit IP Tables
 Edits the IP tables configuration on the device.
 ```sh 
 config = {
