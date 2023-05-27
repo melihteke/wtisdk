@@ -16,6 +16,10 @@ Please refer to the WTI Website for more information about Western Telematic Inc
 
 Please note that this SDK is not an official tool provided by Western Telematic Inc., but an independent contribution to facilitate working with their devices.
 
+**Disclaimer: All risks associated with the usage of this SDK are the responsibility of the users. It is recommended to thoroughly test the SDK in a non-production environment before deploying it in a production environment.**
+
+For any questions or support, please contact me at me@mteke.com
+
 ## Features
 - Connect to WTI devices and retrieve operational data.
 - Change configuration.
