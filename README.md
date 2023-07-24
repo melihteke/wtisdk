@@ -55,7 +55,7 @@ Out[4]:
  'totalports': '8',
  'totalplugs': '8',
  'softwareversion': '7.04 4 Sep 2022',
- 'serialnumber': '01910453453191131',
+ 'serialnumber': '01910453453191231',
  'assettag': '153561',
  'siteid': 'DEV6S01',
  'analogmodemphonenumber': '',
