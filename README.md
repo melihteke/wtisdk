@@ -33,7 +33,7 @@ pip install wtisdk
 
 ### Basic Usage
 ```sh
-(.venv) [mteke1@n6lans00001 test_infra]$ ipython
+(.venv) [mteke@devnet-server test_infra]$ ipython
 Python 3.10.8 (default, Aug 13 2020, 07:46:32) 
 Type 'copyright', 'credits' or 'license' for more information
 IPython 7.16.3 -- An enhanced Interactive Python. Type '?' for help.
