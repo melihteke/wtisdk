@@ -226,6 +226,45 @@ class WtiClient:
         else:
             return response.status_code
 
+    def edit_serial_port_config(self, config):
+        """
+        Edits the serial port configuration on the WTI device.
+
+        Args:
+            config (dict, optional): A dictionary containing the serial port configuration to be applied.
+                   
+                {
+				  "serialports": {
+				    "port": 4,
+				    "portname": "RouterLabel",
+				    "baud": 7,
+				    "handshake": 1,
+				    "stopbits": 1,
+				    "parity": 0,
+				    "mode": 0,
+				    "cmd": 0,
+				    "seq": 1,
+				    "tout": 1,
+				    "echo": 0,
+				    "break": 0,
+				    "logoff": "^H"
+				  }
+				}
+
+        Returns:
+            dict or int: If the API request is successful, returns a dictionary containing the response of the configuration edit.
+                If an error occurs during the API request, returns an integer representing the HTTP status code.
+
+        """
+        url = f"{self.base_url}/api/v2/config/serialports"
+        headers = {'Content-Type': 'application/json'}
+        response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
+
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return response.status_code
+
     def add_new_user(self, config):
         """
         Add a new user using the provided configuration.
