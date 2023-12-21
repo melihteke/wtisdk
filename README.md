@@ -200,6 +200,55 @@ specific_port_config = client.get_specific_serial_port_config("COM1")
 print(specific_port_config)
 ```
 
+### EditSpecific Serial Port Configuration
+Changes the configuration of a specific serial port from the WTI device.
+```sh
+
+In [9]: new_config = {
+   ...:   "serialports": {
+   ...:     "port": 37,
+   ...:     "portname": "FREEE",
+   ...:     "baud": 7,
+   ...:     "handshake": 1,
+   ...:     "stopbits": 1,
+   ...:     "parity": 0,
+   ...:     "mode": 0,
+   ...:     "cmd": 0,
+   ...:     "seq": 1,
+   ...:     "tout": 1,
+   ...:     "echo": 0,
+   ...:     "break": 0,
+   ...:     "logoff": "^H"
+   ...:   }
+   ...: }
+
+In [10]: client.edit_serial_port_config(new_config)
+Out[10]: 
+{'status': {'code': '0', 'text': 'ok'},
+ 'serialports': [{'port': '37',
+   'portname': 'FREEE',
+   'porttype': '0',
+   'baud': '7',
+   'parity': '0',
+   'stopbits': '1',
+   'handshake': '1',
+   'mode': '0',
+   'cmd': '0',
+   'seq': '1',
+   'tout': '1',
+   'echo': '0',
+   'break': '0',
+   'logoff': '^H',
+   'connstatus': 'Free',
+   'drct_cnct': '0',
+   'drct_cnct_brk': '0',
+   'ipaliasport': 'none',
+   'ipaliasadd': ''}],
+ 'datacount': '1'}
+
+```
+
+
 ### Retrieve AAA Server configuration
 Retrieve the configuration of a WTI AAA server.
 
