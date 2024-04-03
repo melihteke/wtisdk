@@ -27,7 +27,10 @@ class WtiClient:
         """
         url = f"{self.base_url}/api/v2/status"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_serial_port_config(self):
         """
@@ -40,7 +43,10 @@ class WtiClient:
         """
         url = f"{self.base_url}/api/v2/config/serialports"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def get_temperature(self):
         """
@@ -53,7 +59,10 @@ class WtiClient:
         """
         url = f"{self.base_url}/api/v2/status/temperature"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_firmware_status(self):
         """
@@ -66,7 +75,10 @@ class WtiClient:
         """
         url = f"{self.base_url}/api/v2/status/firmware"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def get_alarm_status(self):
         """
@@ -79,7 +91,10 @@ class WtiClient:
         """
         url = f"{self.base_url}/api/v2/status/alarms"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def get_power_plug_config(self):
         """
@@ -92,7 +107,10 @@ class WtiClient:
         """
         url = f"{self.base_url}/api/v2/config/powerplug"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def get_specific_power_plug_config(self,plug_number):
         """
@@ -108,7 +126,10 @@ class WtiClient:
         """
         url = f"{self.base_url}/api/v2/config/powerplug?plug=" + plug_number
         response = requests.get(url, auth=(self.username, self.password), verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
 
     def edit_power_plug_config(self, config):
@@ -134,7 +155,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/powerplug"
         headers = {'Content-Type': 'application/json'}
         response = requests.post(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def edit_power_plug_plugconfig(self, config):
             """
@@ -162,10 +186,10 @@ class WtiClient:
             url = f"{self.base_url}/api/v2/config/powerplugconfig"
             headers = {'Content-Type': 'application/json'}
             response = requests.post(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-            if response.status_code == 200:
+            try:
                 return response.json()
-            else:
-                return response.status_code
+            except:
+                return response.text
             
     def get_power_config(self):
         """
@@ -178,7 +202,10 @@ class WtiClient:
         """
         url = f"{self.base_url}/api/v2/config/power"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def get_specific_user(self, user):
         """
@@ -194,7 +221,10 @@ class WtiClient:
         """
         url = f"{self.base_url}/api/v2/config/users?username=" + user
         response = requests.get(url, auth=(self.username, self.password), verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def edit_serial_port_config(self, config):
         """
@@ -229,7 +259,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/serialports"
         headers = {'Content-Type': 'application/json'}
         response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)   
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def add_new_user(self, config):
         """
@@ -270,7 +303,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/users"
         headers = {'Content-Type': 'application/json'}
         response = requests.post(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def edit_user(self, config):
         """
@@ -312,7 +348,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/users"
         headers = {'Content-Type': 'application/json'}
         response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def delete_user(self, username):
         """
@@ -335,7 +374,10 @@ class WtiClient:
             """
         url = f"{self.base_url}/api/v2/config/users?username=" + username
         response = requests.delete(url, auth=(self.username, self.password), verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_all_serial_port_config(self):
         """
@@ -349,7 +391,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/serialports"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
     
     def get_specific_serial_port_config(self, serial_port):
         """
@@ -366,7 +411,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/serialports?serialports=" + str(serial_port)
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_aaa_server_config(self, aaa_server='radius'):
         """Retrieve the configuration of an WTI AAA server.
@@ -383,7 +431,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/aaaserver?service=" + aaa_server
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_network_interface_config(self, interface):
         """
@@ -450,7 +501,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/interface"
         headers = {'Content-Type': 'application/json'}
         response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_config_hostname(self):
         """
@@ -480,7 +534,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/hostname"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def edit_config_hostname(self, config):
         """
@@ -504,7 +561,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/hostname"
         headers = {'Content-Type': 'application/json'}
         response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_config_timedate(self):
         """
@@ -518,7 +578,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/timedate"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def edit_config_timedate(self, config):
         """
@@ -561,7 +624,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/timedate"
         headers = {'Content-Type': 'application/json'}
         response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def get_config_web_service(self):
         """
@@ -575,7 +641,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/web"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def get_config_snmp_trap(self):
         """
@@ -590,7 +659,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/snmptrap"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def edit_config_snmp_trap(self, config):
         """    
@@ -630,7 +702,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/snmptrap"
         headers = {'Content-Type': 'application/json'}
         response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_config_snmp_access(self):
         """
@@ -645,7 +720,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/snmpaccess"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def edit_config_snmp_access(self, config):
         """
@@ -695,7 +773,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/snmpaccess"
         headers = {'Content-Type': 'application/json'}
         response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_config_ip_tables(self):
         """
@@ -710,7 +791,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/iptables"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
 
     def edit_config_ip_tables(self, config):
         """
@@ -745,7 +829,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/iptables"
         headers = {'Content-Type': 'application/json'}
         response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_config_syslog_server(self):
         """
@@ -760,7 +847,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/syslogserver"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def edit_config_syslog_server(self, config):
         """
@@ -799,7 +889,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/syslogserver"
         headers = {'Content-Type': 'application/json'}
         response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def get_config_syslog_client(self):
         """
@@ -814,7 +907,10 @@ class WtiClient:
         url = f"{self.base_url}/api/v2/config/syslogclient"
         response = requests.get(url, auth=(self.username, self.password), verify=False)
         response.close()
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return response.text
         
     def edit_config_syslog_client(self, config):
             """
@@ -851,5 +947,8 @@ class WtiClient:
             url = f"{self.base_url}/api/v2/config/syslogclient"
             headers = {'Content-Type': 'application/json'}
             response = requests.put(url, auth=(self.username, self.password), headers=headers, json=config, verify=False)
-            return response.json()
+            try:
+                return response.json()
+            except:
+                return response.text
             
